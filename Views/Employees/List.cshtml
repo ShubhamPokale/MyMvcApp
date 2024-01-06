@@ -1,0 +1,39 @@
+﻿
+@model List<MyMvcApp100.Models.Employee>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2> This is Employee View List</h2>
+
+<table class = "table table-hover table-striped">
+<thead>
+    <tr>
+        <th>Employee ID
+        </th>
+        <th>Employee First Name
+        </th>
+        <th>Employee Last Name
+        </th>
+        <th>Employee Designation</th>
+
+<tr>
+</thead>
+
+
+<tbody>
+    @foreach (var employee in Model)
+    {
+        <tr>
+
+            <td>@employee.EmployeeId </td>
+            <td>@employee.EmployeeFirstName</td>
+            <td>@employee.EmployeeLastName</td>
+            <td>@employee.EmployeeDesignation</td>
+        </tr>
+    }
+
+</tbody>
+
+
+</table>
